@@ -1,0 +1,31 @@
+*{
+	color: #212529;
+	font-family: "Open Sans", sans-serif;
+}
+.btn-group button{
+	font-weight: 600;
+	color: #212529;
+	font-style: bold;
+	text-transform:uppercase;
+	margin: 0; padding: 0;
+}
+.btn-group #b2,#b3,#b4{
+	font-style: bold;
+	font-weight: 600;
+	margin-left: 100px;
+}
+
+.btn-group button:hover{
+	color: #edbb00;
+}
+.btn-group .dropdown-menu a{
+	color:black;
+	margin:5px 0;
+}
+.btn-group .dropdown-menu a:hover{
+	color:#edbb00;
+}
+#chart {
+  max-width: 650px;
+  margin: 35px auto;
+}

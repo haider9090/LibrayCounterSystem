@@ -1,0 +1,423 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>User</title>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
+    <meta name="author" content="Codedthemes" />
+    <link rel="icon" href="{% static 'assets/images/cafe.webp' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/pages/waves/css/waves.min.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/pages/waves/css/waves.min.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/icon/themify-icons/themify-icons.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome-n.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/jquery.mCustomScrollbar.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/user.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/visit.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet">
+    <script type="text/javascript" src="{% static 'assets/js/javascchart.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+            crossorigin="anonymous"></script>
+    <style>
+        .logo i{
+            color: white;
+            font-size: 28px;
+            margin-right: 5px;
+
+        }
+        .logo_name{
+            color: white;
+            font-size: 20px;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+<div class="theme-loader">
+    <div class="loader-track">
+        <div class="preloader-wrapper">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pre-loader start -->
+<div class="theme-loader">
+    <div class="loader-track">
+        <div class="preloader-wrapper">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pre-loader end -->
+<div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+        <nav class="navbar header-navbar pcoded-header">
+            <div class="navbar-wrapper">
+                <div class="navbar-logo">
+                    <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
+                        <i class="ti-menu"></i>
+                    </a>
+                    <div class="mobile-search waves-effect waves-light">
+                        <div class="header-search">
+                            <div class="main-search morphsearch-search">
+                                <div class="input-group">
+                                    <span class="input-group-prepend search-close"><i class="ti-close input-group-text"></i></span>
+                                    <input type="text" class="form-control" placeholder="Enter Keyword">
+                                    <span class="input-group-append search-btn"><i class="ti-search input-group-text"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo">
+                        <i class='bx bx-scan bg-danger'></i>
+                        <div class="logo_name">LVCS</div>
+                    </div>
+
+                    <a class="mobile-options waves-effect waves-light">
+                        <i class="ti-more"></i>
+                    </a>
+                </div>
+                <div class="navbar-container container-fluid">
+                    <ul class="nav-right">
+
+                        <li class="user-profile header-notification">
+                            <a href="#!" class="waves-effect waves-light">
+                                <img src="{% static 'assets/images/avatar-4.jpg' %}" class="img-radius" alt="User-Profile-Image">
+                                <span>Haider Ali</span>
+                                <i class="ti-angle-down"></i>
+                            </a>
+                            <ul class="show-notification profile-notification">
+                                <li class="waves-effect waves-light">
+                                    <a href="{% url 'setting' %}">
+                                        <i class="ti-settings"></i> Settings
+                                    </a>
+                                </li>
+                                <li class="waves-effect waves-light">
+                                    <a href="{% url 'profile' %}">
+                                        <i class="ti-user"></i> Profile
+                                    </a>
+                                </li>
+
+                                <li class="waves-effect waves-light">
+                                    <a href="{% url 'login' %}">
+                                        <i class="fas fa-power-off"></i> Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="pcoded-main-container">
+            <div class="pcoded-wrapper">
+                <nav class="pcoded-navbar">
+                    <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                    <div class="pcoded-inner-navbar main-menu">
+                        <ul class="pcoded-item pcoded-left-item">
+                            <li class="">
+                                <a href="{% url 'dashboard' %}" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                    <span class="pcoded-mtext">Dashboard</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="{% url 'visitors' %}" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-home"></i><b>O</b></span>
+                                    <span class="pcoded-mtext">Visitors</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="{% url 'reports' %}" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="fas fa-th-large"></i><b>P</b></span>
+                                    <span class="pcoded-mtext">Reports</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="{% url 'assistant' %}" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-user"></i><b>U</b></span>
+                                    <span class="pcoded-mtext">Assistant</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="{% url 'setting' %}" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-user"></i><b>U</b></span>
+                                    <span class="pcoded-mtext">Settings</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="{% url 'login' %}" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="fas fa-power-off"></i><b>L</b></span>
+                                    <span class="pcoded-mtext">Logout</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+
+
+                <div class="pcoded-content">
+                    <!-- Page-header start -->
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <!--  <div class="col-md-8">
+                                     <div class="page-header-title">
+                                         <h5 class="m-b-10">Dashboard</h5>
+                                         <p class="m-b-0">Welcome to GIFT Cafe</p>
+                                     </div>
+                                 </div> -->
+                                <div class="col-md-4 ml-auto">
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="{% url 'dashboard' %}"> <i class="fa fa-home"></i> </a>
+                                        </li>
+                                        <li class="breadcrumb-item"><a href="{% url 'visitors' %}">Visitors</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Page-header end -->
+                    <div class="pcoded-inner-content">
+                        <!-- Main-body start -->
+                        <div class="main-body">
+                            <div class="page-wrapper">
+                                <!-- Page-body start -->
+                                <div class="page-body">
+                                    <!-- Earning Details Start -->
+
+                                    <!-- Add Contact Popup Model -->
+
+                                    <div class="table-responsive">
+                                        <div class="table-title">
+                                            <div class="row" id="d1">
+                                                <div class="col-sm-6">
+                                                    <div class="col-md-10 mt-sm-1 mb-sm-1">
+                                                        <input type="text" name="search" class="form-control" placeholder="Search">
+                                                        <span class="form-bar"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+
+                                                    <a href="{% url 'add-user' %}" class="btn btn-secondary" ><i class="material-icons">&#xE147;</i> Add New Assistant</a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <table id="demo-foo-addrow" class="table table-bordered m-t-30 table-hover contact-list" data-paging="true" data-paging-size="7">
+                                            <thead>
+                                            <tr>
+                                                <th>
+
+                                                </th>
+                                                <th>Username</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Email</th>
+                                                <th>Password</th>
+                                                <th>Active Status</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for user in userlist %}
+                                                <tr>
+                                                    <td>
+
+                                                    </td>
+                                                    <td>
+                                                        <a href="{% url 'update-data' user.id %}" class="edit"><img src="{% static 'assets/images/8.jpg' %}" alt="user" width="40" class="img-circle" /> {{ user.id }}</a>
+                                                    </td>
+                                                    <td>{{ user.firstname }}</td>
+                                                    <td>{{ user.lastname }}</td>
+                                                    <td>{{ user.email }}</td>
+                                                    <td>{{ user.password }}</td>
+                                                    <td>{{ user.isActive }}</td>
+                                                    <td>
+                                                        <a href="{% url 'update-data' user.id %}"><i class="material-icons" title="Edit">&#xE254;</i></a>
+                                                        <a href="{% url 'delete-user' user.id %}">
+                                                            <i class="material-icons" data-toggle="tooltip" title="disable">&#xE872;</i>
+                                                        </a>
+
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                        <div class="clearfix">
+                                            <div class="hint-text">Showing <b>5</b> out of <b>100</b> entries</div>
+                                            <ul class="pagination">
+                                                <li class="page-item disabled"><a href="#">Previous</a></li>
+                                                <li class="page-item"><a href="#" class="page-link">1</a></li>
+                                                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                                <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                                                <li class="page-item"><a href="#" class="page-link">4</a></li>
+                                                <li class="page-item"><a href="#" class="page-link">5</a></li>
+                                                <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Page-body end -->
+</div>
+<div id="styleSelector"> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Required Jquery -->
+<script type="text/javascript" src="{% static 'assets/js/jquery/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery-ui/jquery-ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/popper.js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/bootstrap/js/bootstrap.min.js' %}"></script>
+<!-- waves js -->
+<script src="{% static 'assets/pages/waves/js/waves.min.js' %}"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="{% static 'assets/js/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
+
+<!-- slimscroll js -->
+<script src="{% static 'assets/js/jquery.mCustomScrollbar.concat.min.js ' %}"></script>
+
+<script src="{% static 'assets/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+
+<!-- Custom scripts -->
+<script type="text/javascript" src="{% static 'assets/js/mychart.js' %}"></script>
+<!-- menu js -->
+<script src="{% static 'assets/js/pcoded.min.js' %}"></script>
+<script src="{% static 'assets/js/vertical/vertical-layout.min.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'assets/js/script.js' %}"></script>
+</body>
+</html>
+

@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
+    <meta name="author" content="Codedthemes" />
+    <!-- Favicon icon -->
+
+    <link rel="icon" href="{% static 'assets/images/logo.png' %}" type="image/x-icon">
+    <!-- Google font-->
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' %}" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap/css/bootstrap.min.css' %}">
+    <!-- waves.css -->
+    <link rel="stylesheet" href="{% static 'assets/pages/waves/css/waves.min.css' %}" type="text/css" media="all">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/icon/themify-icons/themify-icons.css' %}">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/icon/icofont/css/icofont.css' %}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/icon/font-awesome/css/font-awesome.min.css' %} ">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+</head>
+
+<body class="bg-login" style="height: auto;" >
+
+<section>
+    <!-- Container-fluid starts -->
+    <div class="container login-block bg-login-form">
+        <div class="">
+            <div class="col-sm-12">
+                <!-- Authentication card start -->
+
+                <form class="md-float-material form-material"  method="POST">
+                    {% csrf_token %}
+                    {% if messages %}
+                        <div class="form-group">
+                            <div class="col-12">
+                                {% for message in messages %}
+                                    {% if message.tags == "error" %}
+                                        <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin-top: 10px;">
+                                            {{ message }}
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    {% elif message.tags == "success" %}
+                                        <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin-top: 10px;">
+                                            {{ message }}
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div class="auth-box card">
+                        <div class="card-block mt-4">
+                            <div class="row m-b-20 justify-content-center">
+                                <div class="bg-light col-md-3">
+                                    <img src="{% static 'assets/images/logo.png' %}" alt="logo.png" width="100px" height="100px">
+                                </div>
+                            </div>
+                            <div class="row m-b-20">
+                                <div class="col-md-12 text-primary">
+                                    <h3 class="text-center">Login</h3>
+                                </div>
+                            </div>
+                            <div class="form-group form-primary">
+                                <input type="text" name="username" class="form-control" placeholder="Enter Username" required="">
+                                <span class="form-bar"></span>
+                                <label class="float-label"></label>
+                            </div>
+                            <div class="form-group form-primary">
+                                <input type="password" name="password" class="form-control" placeholder="Password" required="">
+                                <span class="form-bar"></span>
+                                <label class="float-label"></label>
+                            </div>
+                            <div class="form-group form-primary text-right">
+                                <a href="#">Forgot Password?</a>
+                            </div>
+
+                            <div class="row m-t-30">
+                                <div class="col-md-12">
+                                    {#                                    <a href="{% url 'dashboard' %}">#}
+                                    <button {% url 'dashboard' %} type="submit" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">Login</Button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!-- end of form -->
+            </div>
+            <!-- end of col-sm-12 -->
+        </div>
+        <!-- end of row -->
+    </div>
+    <!-- end of container-fluid -->
+</section>
+
+<!-- Required Jquery -->
+<script type="text/javascript" src="{% static 'assets/js/jquery/jquery.min.js' %} "></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery-ui/jquery-ui.min.js' %} "></script>
+<script type="text/javascript" src="{% static 'assets/js/popper.js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/bootstrap/js/bootstrap.min.js' %}"></script>
+<!-- waves js -->
+<script src="{% static 'assets/pages/waves/js/waves.min.js' %}"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="{% static 'assets/js/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/common-pages.js' %}"></script>
+</body>
+
+</html>

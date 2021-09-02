@@ -1,0 +1,22 @@
+.logo i{
+        color: white;
+        font-size: 28px;
+        margin-right: 5px;
+
+    }
+    .logo_name{
+        color: white;
+        font-size: 20px;
+        font-weight: 400;
+    }
+   .report{
+       width: auto;
+       font-size: 50% !important;
+   }
+   .modal-dialog{
+   	max-width: 60%;
+   	
+   }
+   .modal-content{
+   	height: 90%;
+   }

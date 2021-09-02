@@ -1,0 +1,294 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Profile</title>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
+    <meta name="author" content="Codedthemes" />
+    <link rel="icon" href="{% static 'assets/images/cafe.webp' %}" type="image/x-icon">
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/pages/waves/css/waves.min.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/pages/waves/css/waves.min.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/icon/themify-icons/themify-icons.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome-n.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/jquery.mCustomScrollbar.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/profile.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script type="text/javascript" src="{% static 'assets/js/javascchart.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+            crossorigin="anonymous"></script>
+    <style>
+        .logo i{
+            color: white;
+            font-size: 28px;
+            margin-right: 5px;
+
+        }
+        .logo_name{
+            color: white;
+            font-size: 20px;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+ <!-- Pre-loader start -->
+    <div class="theme-loader">
+        <div class="loader-track">
+            <div class="preloader-wrapper">
+                <div class="spinner-layer spinner-blue">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="spinner-layer spinner-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-yellow">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-green">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pre-loader end -->
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+            <nav class="navbar header-navbar pcoded-header">
+                <div class="navbar-wrapper">
+                    <div class="navbar-logo">
+                        <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
+                            <i class="ti-menu"></i>
+                        </a>
+                        <div class="mobile-search waves-effect waves-light">
+                            <div class="header-search">
+                                <div class="main-search morphsearch-search">
+                                    <div class="input-group">
+                                        <span class="input-group-prepend search-close"><i class="ti-close input-group-text"></i></span>
+                                        <input type="text" class="form-control" placeholder="Enter Keyword">
+                                        <span class="input-group-append search-btn"><i class="ti-search input-group-text"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="logo">
+                            <i class='bx bx-scan bg-danger'></i>
+                            <div class="logo_name">LVCS</div>
+                        </div>
+
+                        <a class="mobile-options waves-effect waves-light">
+                            <i class="ti-more"></i>
+                        </a>
+                    </div>
+                    <div class="navbar-container container-fluid">
+                        <ul class="nav-right">
+
+                            <li class="user-profile header-notification">
+                                <a href="#!" class="waves-effect waves-light">
+                                    <img src="{% static 'assets/images/avatar-4.jpg' %}" class="img-radius" alt="User-Profile-Image">
+                                    <span>Haider Ali</span>
+                                    <i class="ti-angle-down"></i>
+                                </a>
+                                <ul class="show-notification profile-notification">
+                                    <li class="waves-effect waves-light">
+                                        <a href="{% url 'setting' %}">
+                                            <i class="ti-settings"></i> Settings
+                                        </a>
+                                    </li>
+                                    <li class="waves-effect waves-light">
+                                        <a href="{% url 'profile' %}">
+                                            <i class="ti-user"></i> Profile
+                                        </a>
+                                    </li>
+
+                                    <li class="waves-effect waves-light">
+                                        <a href="{% url 'login' %}">
+                                            <i class="fas fa-power-off"></i> Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    <nav class="pcoded-navbar">
+                        <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                        <div class="pcoded-inner-navbar main-menu">
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="">
+                                    <a href="{% url 'dashboard' %}" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                        <span class="pcoded-mtext">Dashboard</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="{% url 'visitors' %}" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-home"></i><b>O</b></span>
+                                        <span class="pcoded-mtext">Visitors</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="{% url 'reports' %}" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="fas fa-th-large"></i><b>P</b></span>
+                                        <span class="pcoded-mtext">Reports</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="{% url 'assistant' %}" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-user"></i><b>U</b></span>
+                                        <span class="pcoded-mtext">Assistant</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="{% url 'setting' %}" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-user"></i><b>U</b></span>
+                                        <span class="pcoded-mtext">Settings</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="{% url 'login' %}" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="fas fa-power-off"></i><b>L</b></span>
+                                        <span class="pcoded-mtext">Logout</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+
+
+
+
+
+                <div class="pcoded-content bg-login" style="width: auto;">
+                    <div class="pcoded-inner-content">
+                        <!-- Main-body start -->
+                        <div class="main-body">
+                            <div class="page-wrapper">
+                                <!-- Page-body start -->
+                                <div class="page-body">
+                                    <!-- Earning Details Start -->
+                                    <center>
+                                        <div class="box">
+
+                                            <input type="file" id="file" name="image" >
+                                            <img class="pro" src="{% static 'assets/images/ali.jpg' %}" width="25%" height="25%">
+                                            <br>
+                                            <label for="file">EDIT PIC</label>
+
+
+
+                                            <input type="text" placeholder="First Name" name="" >
+                                            <input type="text" placeholder="Last Name" name="" >
+                                            <input type="Email" placeholder="Email ID" name="" >
+                                            <input type="number" placeholder="Phone Number" name="" >
+
+
+                                            <button style="float: left;margin: 10px 0 0 18.2%;">CANCEL</button>
+
+                                            <button
+                                                    name="done" style="float: right;margin:10px 18.2% 0 0;">DONE</button>
+
+                                        </div>
+
+
+                                    </center>
+
+
+                                </div>
+                                <!-- Page-body end -->
+
+                            </div>
+                            <footer>
+                                <p></p>
+
+                            </footer>
+                            <div id="styleSelector"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Required Jquery -->
+<script type="text/javascript" src="{% static 'assets/js/jquery/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery-ui/jquery-ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/popper.js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/bootstrap/js/bootstrap.min.js' %}"></script>
+<!-- waves js -->
+<script src="{% static 'assets/pages/waves/js/waves.min.js' %}"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="{% static 'assets/js/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
+
+<!-- slimscroll js -->
+<script src="{% static 'assets/js/jquery.mCustomScrollbar.concat.min.js ' %}"></script>
+
+<script src="{% static 'assets/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+
+<!-- Custom scripts -->
+<script type="text/javascript" src="{% static 'assets/js/mychart.js' %}"></script>
+<!-- menu js -->
+<script src="{% static 'assets/js/pcoded.min.js' %}"></script>
+<script src="{% static 'assets/js/vertical/vertical-layout.min.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'assets/js/script.js' %}"></script>
+</body>
+</html>
+
